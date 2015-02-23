@@ -1,0 +1,6 @@
+#!/usr/bin/sh
+file="$1.sql"
+mysqldump $1 > $file
+sed -i 1i"USE \`$1\`;" $file
+sed -i 1i"CREATE DATABASE IF NOT EXISTS \`$1\` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;" $file
+
