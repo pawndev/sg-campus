@@ -1,9 +1,13 @@
 # sg-campus
-Many files that make your life easier
-
+EN : Many files that make your life easier
+FR : Plusieurs fichiers qui vous simplifieront la vie
 # dbexport
-Do this : ./dbexport myDatabase or sh dbexport myDatabase
-And this script export your db with the create and use statement
+EN : Do this : ./dbexport myDatabase or sh dbexport myDatabase
+	And this script export your db with the create and use statement
 
+FR: Faites ceci : ./dbexport madatabase ou sh dbexport maDatabase
+	Et ce script exportera votre db avec le "CREATE" et "USE"
 # Database.php
-This file is our common file where the unix socket is available anywhere on our computer
+EN : This file is our common file where the unix socket is available anywhere on our computer (And valid on PHP CodeSniffer)
+
+FR: Ce fichier est notre fichier commun de connexion à mysql grace à PDO, valide sur tout nos pc ( et valide PHP CodeSniffer)
