@@ -12,3 +12,8 @@ FR: Faites ceci : ./dbexport madatabase ou sh dbexport maDatabase
 EN : This file is our common file where the unix socket is available anywhere on our computer (And valid on PHP CodeSniffer)
 
 FR: Ce fichier est notre fichier commun de connexion à mysql grace à PDO, valide sur tout nos pc ( et valide PHP CodeSniffer)
+
+# BUG
+EN : If you see some bugs, please report me IRL or on my email address
+
+FR : Si vous voyez des bugs, faites moi en part en vrai, ou sur mon adresse email
