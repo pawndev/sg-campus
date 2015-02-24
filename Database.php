@@ -34,10 +34,17 @@ class Database
      */
     public function __construct()
     {
-        $socks = "/home/" . get_current_user() . "/.mysql/mysql.sock";
+        $database = "rss-feed";
+        $os = $_SERVER['SERVER_SOFTWARE'];
+        if (substr($os, 14, 1) === "L") {
+            $socks = "/home/" . get_current_user() . "/.mysql/mysql.sock";
+            $arg = 'mysql:host=localhost;dbname='.$database.';unix_socket='.$socks;
+        } elseif (substr($os, 14, 1) === "W") {
+            $arg = 'mysql:host=localhost;dbname=' . $database;
+        }
         try
         {
-            $this->bdd = new PDO('mysql:host=localhost;dbname=rss-feed;unix_socket=' . $socks, 'root', '');
+            $this->bdd = new PDO($arg, 'root', '');
         }
         catch(Exception $e)
         {
