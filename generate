@@ -1,28 +1,37 @@
 #!/usr/bin/php
 <?php
-	$arg = $argv;
-	array_shift($arg);
-	if(count($arg) === 0)
-	{
-		echo "Usage : ./colle.php className [attr1] [attr2] ...\n";
-	}
-	else
-	{
-		$first = array_shift($arg);
-		$content = "<?php\nclass " . ucfirst($first) . "\n{\n"; 
-		foreach($arg as $key => $value)
-		{
-			$content .= "\tprivate \$_" . $value . ";\n";
-		}
-		foreach($arg as $key => $value)
-		{
-			$content .= "\n\n\tpublic function set" . ucfirst($value) . "(\$arg)\n\t{\n\t\t\$this->_" . $value . " = \$arg;\n\t}";
-			$content .= "\n\n\tpublic function get" . ucfirst($value) . "()\n\t{\n\t\treturn \$this->_" . $value . ";\n\t}";
-		}
-		$content .= "\n}\n?>";
-		$file = ucfirst($first) . '.php';
-		$fop = fopen($file, 'w+');
-		fwrite($fop, $content);
-		fclose($fop);
-	}
+/**
+ *   Make  php class file
+ *
+ *   File to make a php class file
+ *
+ *
+ * PHP Version 5.4
+ *
+ * @category Nothing
+ * @package  Nothing
+ * @author   coquel_d <christophe1.coquelet@epitech.eu>
+ * @license  http://opensource.org/licenses/gpl-license.php GNU Public License
+ * @link     http://localhost:8080/rendu/
+ */
+$arg = $argv;
+array_shift($arg);
+if (count($arg) === 0) {
+    echo "Usage : ./colle.php className [attr1] [attr2] ...\n";
+} else {
+    $first = array_shift($arg);
+    $content = "<?php\nclass " . ucfirst($first) . "\n{\n"; 
+    foreach ($arg as $key => $value) {
+        $content .= "\tprivate \$_" . $value . ";\n";
+    }
+    foreach ($arg as $key => $value) {
+        $content .= "\n\n\tpublic function set" . ucfirst($value) . "(\$arg)\n\t{\n\t\t\$this->_" . $value . " = \$arg;\n\t}";
+        $content .= "\n\n\tpublic function get" . ucfirst($value) . "()\n\t{\n\t\treturn \$this->_" . $value . ";\n\t}";
+    }
+    $content .= "\n}\n?>";
+    $file = ucfirst($first) . '.php';
+    $fop = fopen($file, 'w+');
+    fwrite($fop, $content);
+    fclose($fop);
+}
 ?>
