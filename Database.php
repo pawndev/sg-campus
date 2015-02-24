@@ -9,7 +9,7 @@
  *
  * @category Nothing
  * @package  Nothing
- * @author   coquel_d <christophe1.coquelet@epitech.eu>
+ * @author   
  * @license  http://opensource.org/licenses/gpl-license.php GNU Public License
  * @link     http://localhost:8080/rendu/
  */
@@ -21,7 +21,7 @@
  *
  * @category Nothing
  * @package  Nothing
- * @author   coquel_d <christophe1.coquelet@epitech.eu>
+ * @author   
  * @license  http://opensource.org/licenses/gpl-license.php GNU Public License
  * @link     http://localhost:8080/rendu/
  */
