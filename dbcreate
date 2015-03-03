@@ -1,0 +1,86 @@
+#!/usr/bin/php
+<?php
+class DB {
+    private static $_dbName;
+    private static $_tableNumber;
+    private static $_table = array();
+    private static $_field = array();
+    
+    public static function askName() {
+        echo "Entrez le nom de votre database : ";
+        self::$_dbName = fgets(STDIN);
+    }
+    
+    public static function askLength() {
+        echo "De quel taille/valeur : ";
+        $len = (int)fgets(STDIN);
+        error:
+        if (!is_int($len)) {
+            echo "Un entier s'il vous plait !\n";
+            goto error;
+        }
+        return $len;
+    }
+    
+    public static function askMoreOption() {
+        echo "auto-increment ? [o/n]";
+        $incre = fgets(STDIN);
+        echo "NULL ? [o/n]";
+        $canNull = fgets(STDIN);
+        echo "Defaut : [aucune/null/current_timestamp] ";
+        $def = fgets(STDIN);
+        echo "Index : [none/primary/unique/index/fulltext] ";
+        $index = fgets(STDIN);
+        return "AI:" . $incre . ";null:" . $canNull . ";defaut:" . $def . ";index:" . $index . ";";
+    }
+    
+    public static function createField() {
+        $option = "";
+        echo "Entrez le nom du champ : ";
+        $nameField = fgets(STDIN);
+        echo "Type (TEXT, VARCHAR, INT, DATE, TIMESTAMP, TINYINT) [VARCHAR] : ";
+        $type = fgets(STDIN);
+        $type = strtoupper($type);
+        $len = DB::askLength();
+        $more = DB::askMoreOption();
+        $futRet = $type . ":" . $nameField . ";len:" . $len . ";" . $more;
+        return $futRet;
+    }
+    
+    public static function createTable() {
+        echo "Entrez le nom de la table : ";
+        $nameTable = fgets(STDIN);
+        echo "Combien de champ ? : ";
+        $fieldNumb = fgets(STDIN);
+        for ($i = 0; $i < $fieldNumb; $i++) {
+            $actualField = DB::createField();
+            self::$_field[$i] = $actualField;
+        }
+        self::$_table[$nameTable] = self::$_field;
+   }
+    
+    public static function askTable() {
+        echo "Entrez le nombre de table voulu : ";
+        self::$_tableNumber = fgets(STDIN);
+        for ($i = 0; $i < self::$_tableNumber; $i++) {
+            DB::createTable();
+        }
+    }
+    
+    public static function dataInterpret() {
+        
+    }
+    
+    public static function exportSQL() {
+        
+    }
+    
+    public static function start() {
+        self::askName();
+        self::askTable();
+        var_dump(self::$_table);
+    }
+}
+
+DB::start();
+?>

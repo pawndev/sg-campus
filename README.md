@@ -32,6 +32,10 @@ EN :  This file ``` ./generate className attr1 attr2 ...``` make a php class fil
 
 FR :  Ce fichier ``` ./generate className attr1 attr2 ...``` fait un fichier php contenant la class avec les attributs ainsi que les getter/setter correspondant !
 
+#dbcreate
+EN: This file is not finish, but it'll allow you to create an sql file in CLI : USE : ```./dbcreat```
+FR: Ce fichier c'est pas terminé mais vous permettra d'écrire un fichier sql en ligne de commande : Utilisation : ```./dbcreate```
+
 # BUG
 EN : If you see some bugs, please report me IRL or on my email address
 
