@@ -3,11 +3,25 @@ EN : Many files that make your life easier
 
 FR : Plusieurs fichiers qui vous simplifieront la vie
 # dbexport
-EN : Do this : ./dbexport myDatabase or sh dbexport myDatabase
-	And this script export your db with the create and use statement
+EN : Do this :
+	```shell
+	 ./dbexport myDatabase 
+	```	
+	or 
+	```shell
+	sh dbexport myDatabase
+	```
+And this script export your db with the create and use statement
 
-FR: Faites ceci : ./dbexport madatabase ou sh dbexport maDatabase
-	Et ce script exportera votre db avec le "CREATE" et "USE"
+FR: Faites ceci : 
+	```shell
+	./dbexport madatabase 
+	```
+	ou 
+	```shell
+	sh dbexport maDatabase
+	```
+Et ce script exportera votre db avec le "CREATE" et "USE"
 # Database.php
 EN : This file is our common file where the unix socket is available anywhere on our computer (And valid on PHP CodeSniffer)
 
