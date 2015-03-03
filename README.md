@@ -4,21 +4,21 @@ EN : Many files that make your life easier
 FR : Plusieurs fichiers qui vous simplifieront la vie
 # dbexport
 EN : Do this :
-	```shell
+	```
 	 ./dbexport myDatabase 
 	```	
 	or 
-	```shell
+	```
 	sh dbexport myDatabase
 	```
 And this script export your db with the create and use statement
 
 FR: Faites ceci : 
-	```shell
+	```
 	./dbexport madatabase 
 	```
 	ou 
-	```shell
+	```
 	sh dbexport maDatabase
 	```
 Et ce script exportera votre db avec le "CREATE" et "USE"
@@ -28,9 +28,9 @@ EN : This file is our common file where the unix socket is available anywhere on
 FR: Ce fichier est notre fichier commun de connexion à mysql grace à PDO, valide sur tout nos pc ( et valide PHP CodeSniffer)
 
 # Generate
-EN :  This file './generate className attr1 attr2 ...' make a php class file where you have the private attribute AND the getter/setter for !
+EN :  This file ``` ./generate className attr1 attr2 ...``` make a php class file where you have the private attribute AND the getter/setter for !
 
-FR :  Ce fichier './generate className attr1 attr2 ...' fait un fichier php contenant la class avec les attributs ainsi que les getter/setter correspondant !
+FR :  Ce fichier ``` ./generate className attr1 attr2 ...``` fait un fichier php contenant la class avec les attributs ainsi que les getter/setter correspondant !
 
 # BUG
 EN : If you see some bugs, please report me IRL or on my email address
