@@ -30,7 +30,7 @@ FR: Ce fichier est notre fichier commun de connexion à mysql grace à PDO, vali
 # Generate
 EN :  This file ``` ./generate className attr1 attr2 ...``` make a php class file where you have the private attribute AND the getter/setter for !
 
-FR :  Ce fichier ``` ./generate className attr1 attr2 ...``` fait un fichier php contenant la class avec les attributs ainsi que les getter/setter correspondant !
+FR :  Ce fichier ``` ./generate className attr1 attr2 ...``` fait un fichier php contenant la class avec les attributs ainsi que les getter/setter correspondent !
 
 #dbcreate
 EN: This file is not finish, but it'll allow you to create an sql file in CLI : USE : ```./dbcreate```
